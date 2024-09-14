@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Smart Secured Home</string>
+    <string name="title_activity_respondent_home">RespondentHome</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_case_title">Case History</string>
+    <string name="profile">Profile</string>
+    <string name="space"> </string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="access_token">pk.eyJ1Ijoic2VsZW1lbW9jaGl0ZWxlIiwiYSI6ImNrZGhtdTRyODNkNGkyeHNjdXdtM2hmZXIifQ.8AkW7kFhAnpBlQOZaPExWQ</string>
+    <string name="nav_style" translatable="false">mapbox://styles/mapbox/navigation-guidance-day-v4</string>
+    <string-array name="break_in_method">
+        <item>Window Break-in</item>
+        <item>Door Break-in</item>
+        <item>Panic Alert</item>
+    </string-array>
+</resources>

@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+    --primary-color: rgba(0, 29, 36, 0.986);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    height: 100%;
+    width: 100vw;
+    background-color: #cecece62;
+}
+
+.login-form {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 170px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.register-form {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 7px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.register-link {
+    margin: 10px 60px;
+    font-size: 17px;
+    color: rgba(0, 0, 255, 0.493);
+}
+
+.form-title {
+    font-weight: 500;
+    margin: 0px 60px;
+    text-transform: capitalize;
+}
+
+.login-input label {
+    display: block;
+    margin: 5px 60px;
+    font-size: 16px;
+    width: 80%;
+    color: var(--priary-color);
+}
+
+.login-input input[type="text"],
+.login-input input[type="email"],
+.login-input input[type="time"],
+.login-input input[type="password"],
+.login-input .button {
+    width: 80%;
+    height: 45px;
+    margin: 5px 60px;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.login-input input[type="text"],
+.login-input input[type="time"],
+.login-input input[type="password"],
+.login-input input[type="email"],
+.login-input .button {
+    border-color: var(--primary-color);
+}
+
+.login-input select {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.login-input .button {
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    padding: .6em;
+}
+
+.login-input .btn {
+    margin: 0px !important;
+    width: 90%;
+}
+
+.login-input input[type="radio"] {
+    background-color: red;
+}
+
+.info-personnel {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-personnel span {
+    font-weight: 600;
+}
+
+.login-input img {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.panic {
+    margin: 0 110px !important;
+}
+
+
+/*  Side menu*/
+
+.side-menu {
+    overflow: hidden;
+    height: 100vh;
+    padding-top: 100px;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    font-size: medium;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #fcd0d0;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.side-menu h1 {
+    font-size: 30px;
+    color: #fcc5c5;
+    text-align: center;
+    margin: 10px;
+    transform: translateY(-75px);
+}
+
+.mainSection {
+    transition: margin-left 0.3 ease-in;
+}
+
+#mainSection {
+    margin-left: 220px !important;
+}
+
+.activeitem {
+    border-left: 4px solid coral;
+    background-color: rgba(222, 230, 216, 0.144);
+    width: 100%;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* Packages */
+
+.package1,
+.package2,
+.package3 {
+    height: 20em;
+    margin: 20px 30px;
+    box-shadow: 0px 2px 6px 2px rgba(255, 255, 255, 0.479);
+}
+
+.package1,
+.package2,
+.package3 {
+    background: #fff;
+}
+
+.package1 ul,
+.package2 ul,
+.package3 ul {
+    list-style: none;
+    text-align: center;
+}
+
+.package1 ul .heading1 {
+    background: rgb(205, 230, 186) !important;
+    width: 100%;
+}
+
+.package2 ul .heading2 {
+    background: coral !important;
+    width: 100%;
+}
+
+.package3 ul .heading3 {
+    background: var(--primary-color) !important;
+    width: 100%;
+    color: #fff;
+}
+
+.package1 ul .heading1,
+.package2 ul .heading2,
+.package3 ul .heading3 {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.package1 ul li,
+.package2 ul li,
+.package3 ul li {
+    margin: 15px 0;
+    padding: 5px;
+}
+
+.package1 ul li:nth-child(odd) {
+    background: rgba(222, 230, 216, 0.561);
+}
+
+.package2 ul li:nth-child(odd) {
+    background: rgba(255, 206, 143, 0.39);
+}
+
+.package3 ul li:nth-child(odd) {
+    background: rgba(180, 180, 253, 0.39);
+}
+
+.occupants-table {
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.occupants-table thead {
+    font-weight: normal;
+    margin: 15px;
+    color: #fff;
+    background: var(--primary-color);
+}
+
+.occupants-table thead tr th {
+    padding: 7px;
+    font-weight: normal;
+    margin: 20px;
+}
+
+.occupants-table tbody tr td {
+    padding: 9px;
+    font-weight: normal;
+    margin: 20px;
+}
+
+
+/* Add Form */
+
+.add-form {
+    /* width: 100% !important; */
+    margin: 0 auto !important;
+    /* margin-top: 10px !important; */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.add-form input,
+.add-form label {
+    width: 100%;
+    margin: 4px 45px !important;
+}
+
+.delete {
+    background: red;
+    padding: .7px 3px;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.payments {
+    margin: 0;
+    padding: 7px 20px !important;
+    box-shadow: 2px 1px 4px 2px rgba(0, 29, 36, 0.199);
+    border: none;
+    transition: 200ms ease all;
+}
+
+.payments:hover {
+    border-left: 5px solid var(--primary-color);
+}
+
+.payments small {
+    font-style: oblique;
+}
+
+.payments p {
+    margin: 0;
+}

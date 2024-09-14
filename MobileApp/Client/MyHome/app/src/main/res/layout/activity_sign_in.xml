@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/login" />
+
+        <TextView
+            android:id="@+id/lblUsername"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:textColor="#362e6b"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:ems="10"
+            android:background="#D3D3D3"
+            android:layout_height="35dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/lblPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#362e6b"
+            android:layout_marginTop="8dp"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="#D3D3D3"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="345dp"
+            android:layout_height="55dp"
+            android:padding="16dp"
+            android:background="@drawable/button_style"
+            android:text="Sign In"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            style="?android:attr/borderlessButtonStyle"
+            android:drawableLeft="@drawable/ic_baseline_lock_24" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="345dp"
+            android:layout_height="55dp"
+            android:padding="16dp"
+            android:background="@drawable/button_style"
+            android:text="Register"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_baseline_control_point_24"
+            style="?android:attr/borderlessButtonStyle"
+            android:drawableLeft="@drawable/ic_baseline_control_point_24" />
+        <ProgressBar
+            android:id="@+id/loader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

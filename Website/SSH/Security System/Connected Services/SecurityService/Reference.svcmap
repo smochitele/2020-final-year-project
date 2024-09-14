@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2bae0a16-3bfa-4812-93f6-dbdd7cec47f7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56917/Service1.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="be77b9d3-9086-473c-a52a-7c14988a893d" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ad26ef62-826f-43ac-9b0e-e2ffa7dbcf3c" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="372fdcde-b391-4a4e-a6f5-94bd29fc419d" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="SSH_Service.xsd" MetadataType="Schema" ID="115b5329-43ce-49c9-a0c4-e672bf0a440d" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="SSH_Service.Models.xsd" MetadataType="Schema" ID="49b0116f-636d-4c64-a3a5-f366da9cf176" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="LiveSSH.Models.xsd" MetadataType="Schema" ID="90944911-44c0-4913-9670-93241778e5c7" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="b79bcf42-fd1f-4d2c-a00c-fac7d0c1020d" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+    <MetadataFile FileName="LiveSSH.xsd" MetadataType="Schema" ID="9ce953cb-0614-4e4b-81e4-c59cf9f1f40e" SourceId="1" SourceUrl="http://localhost:56917/Service1.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,30 @@
+.jumbotron {
+    margin-top: 35px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    width: 35em;
+}
+
+.prog {
+    text-align: center;
+}
+
+.prog hr {
+    border: 3px solid rgb(17, 61, 11);
+    width: 30em;
+    position: absolute;
+    top: 60px;
+    z-index: -1;
+}
+
+.prog p {
+    background-color: rgb(1, 82, 79);
+    margin: 0 2em;
+    padding: .3em .7em;
+    display: inline;
+    border-radius: 50%;
+}
+
+.prog-active {
+    border: 4px solid rgba(255, 255, 255, 0.63);
+}

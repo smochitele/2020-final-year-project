@@ -1,0 +1,7 @@
+D:\Newst Project\team18\Service\LiveSSH\bin\LiveSSH.dll.config
+D:\Newst Project\team18\Service\LiveSSH\bin\LiveSSH.dll
+D:\Newst Project\team18\Service\LiveSSH\bin\LiveSSH.pdb
+D:\Newst Project\team18\Service\LiveSSH\obj\Debug\LiveSSH.csprojAssemblyReference.cache
+D:\Newst Project\team18\Service\LiveSSH\obj\Debug\LiveSSH.csproj.CoreCompileInputs.cache
+D:\Newst Project\team18\Service\LiveSSH\obj\Debug\LiveSSH.dll
+D:\Newst Project\team18\Service\LiveSSH\obj\Debug\LiveSSH.pdb

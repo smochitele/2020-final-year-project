@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SSH_DB" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SSH_DB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SSH_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DB_Address" Member="DB_Addresses">
+    <Type Name="DB_Address">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Surburb" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="StreetName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="HouseNo" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ZIPCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Longitute" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Lattitute" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="HouseID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DB_House_DB_Address" Member="DB_House" ThisKey="HouseID" OtherKey="HouseID" Type="DB_House" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_Alert" Member="DB_Alerts">
+    <Type Name="DB_Alert">
+      <Column Name="AlertID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IsFalseAlarm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AlartMethod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HouseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OccupantID" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="RespondentID" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="DB_House_DB_Alert" Member="DB_House" ThisKey="HouseID" OtherKey="HouseID" Type="DB_House" IsForeignKey="true" />
+      <Association Name="DB_User_DB_Alert" Member="DB_User" ThisKey="OccupantID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+      <Association Name="DB_User_DB_Alert1" Member="DB_User1" ThisKey="RespondentID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_House" Member="DB_Houses">
+    <Type Name="DB_House">
+      <Column Name="HouseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AlarmStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="DB_House_DB_Address" Member="DB_Addresses" ThisKey="HouseID" OtherKey="HouseID" Type="DB_Address" />
+      <Association Name="DB_House_DB_Alert" Member="DB_Alerts" ThisKey="HouseID" OtherKey="HouseID" Type="DB_Alert" />
+      <Association Name="DB_House_DB_Case" Member="DB_Cases" ThisKey="HouseID" OtherKey="HouseID" Type="DB_Case" />
+      <Association Name="DB_HouseOwner_DB_House" Member="DB_HouseOwner" ThisKey="OwnerID" OtherKey="ID" Type="DB_HouseOwner" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_HouseOccupant" Member="DB_HouseOccupants">
+    <Type Name="DB_HouseOccupant">
+      <Column Name="ID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HouseOwnerID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="DB_HouseOwner_DB_HouseOccupant" Member="DB_HouseOwner" ThisKey="HouseOwnerID" OtherKey="ID" Type="DB_HouseOwner" IsForeignKey="true" />
+      <Association Name="DB_User_DB_HouseOccupant" Member="DB_User" ThisKey="ID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_HouseOwner" Member="DB_HouseOwners">
+    <Type Name="DB_HouseOwner">
+      <Column Name="ID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PackageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DB_HouseOwner_DB_House" Member="DB_Houses" ThisKey="ID" OtherKey="OwnerID" Type="DB_House" />
+      <Association Name="DB_HouseOwner_DB_HouseOccupant" Member="DB_HouseOccupants" ThisKey="ID" OtherKey="HouseOwnerID" Type="DB_HouseOccupant" />
+      <Association Name="DB_Package_DB_HouseOwner" Member="DB_Package" ThisKey="PackageID" OtherKey="PackageID" Type="DB_Package" IsForeignKey="true" />
+      <Association Name="DB_User_DB_HouseOwner" Member="DB_User" ThisKey="ID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_Package" Member="DB_Packages">
+    <Type Name="DB_Package">
+      <Column Name="PackageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(225) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(225) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="DB_Package_DB_HouseOwner" Member="DB_HouseOwners" ThisKey="PackageID" OtherKey="PackageID" Type="DB_HouseOwner" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_Respondent" Member="DB_Respondents">
+    <Type Name="DB_Respondent">
+      <Column Name="ID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastLattitute" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LastLongitute" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DB_Respondent_DB_Case" Member="DB_Cases" ThisKey="ID" OtherKey="RespondentID" Type="DB_Case" />
+      <Association Name="DB_User_DB_Respondent" Member="DB_User" ThisKey="ID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_User" Member="DB_Users">
+    <Type Name="DB_User">
+      <Column Name="ID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateRegistered" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="DB_User_DB_Alert" Member="DB_Alerts" ThisKey="ID" OtherKey="OccupantID" Type="DB_Alert" />
+      <Association Name="DB_User_DB_Alert1" Member="DB_Alerts1" ThisKey="ID" OtherKey="RespondentID" Type="DB_Alert" />
+      <Association Name="DB_User_DB_HouseOccupant" Member="DB_HouseOccupant" ThisKey="ID" OtherKey="ID" Type="DB_HouseOccupant" Cardinality="One" />
+      <Association Name="DB_User_DB_HouseOwner" Member="DB_HouseOwner" ThisKey="ID" OtherKey="ID" Type="DB_HouseOwner" Cardinality="One" />
+      <Association Name="DB_User_DB_Respondent" Member="DB_Respondent" ThisKey="ID" OtherKey="ID" Type="DB_Respondent" Cardinality="One" />
+      <Association Name="DB_User_DB_Case" Member="DB_Cases" ThisKey="ID" OtherKey="UserID" Type="DB_Case" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DB_Case" Member="DB_Cases">
+    <Type Name="DB_Case">
+      <Column Name="CaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReposponseTime" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ResolutionDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="HouseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespondentID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DB_House_DB_Case" Member="DB_House" ThisKey="HouseID" OtherKey="HouseID" Type="DB_House" IsForeignKey="true" />
+      <Association Name="DB_Respondent_DB_Case" Member="DB_Respondent" ThisKey="RespondentID" OtherKey="ID" Type="DB_Respondent" IsForeignKey="true" />
+      <Association Name="DB_User_DB_Case" Member="DB_User" ThisKey="UserID" OtherKey="ID" Type="DB_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

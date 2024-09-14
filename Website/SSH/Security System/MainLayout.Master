@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainLayout.master.cs" Inherits="Security_System.MainLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Dashboard</title>
+    <link href="css/bootstrap.css"  rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <style>
+        ul hr {
+            background: #808080;
+        }
+    </style>
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="/" class="main-logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="img/menu.svg" alt="menu button" class="toggler-btn">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                       <asp:Button text="Panic" class="nav-link panic" ID="PanicButton" runat="server" OnClick="PanicButton_Click" Visible="false"    />
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" id="Username" runat="server"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="menu-section">
+        <ul class="menu">
+            
+            <li class="menu-item" id="dashboard" runat="server"><a href="Dashboard.aspx">Dashboard</a></li>
+            <li class="menu-item" id="casess" runat="server"><a href="cases.aspx">Cases</a></li>
+            <li class="menu-item" id="summary" runat="server"><a href="Summary.aspx">Hotspots</a></li>
+            <hr />
+            
+            <li class="menu-item" id="watch" runat="server"><a href="Neighborhood.aspx">Neighborhood Watch</a></li>
+            <hr />
+            <li class="menu-item" id="dutyies" runat="server"><a href="Workinglibrary.aspx">On Duty</a></li>
+            <li class="menu-item" id="respodents" runat="server" ><a href="Respondents.aspx" >Respondents</a></li>
+            <li class="menu-item" id="occupants" runat="server" ><a href="Occupants.aspx" >Occupants</a></li>
+            
+            <li class="menu-item"><a href="Logout.aspx">Log out</a></li>
+        </ul>
+        
+    </div>
+    <div class="main-content">
+        
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+     
+    </div>
+     </form>
+
+    <script>
+        let state = false;
+        let switchName = document.querySelector("#switchName");
+        let switch_ = document.querySelector("#customSwitch1");
+        switch_.addEventListener("change", () => {
+            console.log("Touched");
+            if (this.checked) {
+                switchName = "Off";
+            }
+            else {
+                switchName = "On";
+            }
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

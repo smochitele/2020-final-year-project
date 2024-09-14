@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="Name Surname"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/textView1"
+        android:layout_weight="50"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+
+        <TextView
+            android:gravity="center"
+            android:text="201805751@gmail.com"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/textView2"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="9409245028083"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2"/>
+    </LinearLayout>
+</LinearLayout>

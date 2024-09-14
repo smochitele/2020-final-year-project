@@ -1,0 +1,11 @@
+.col-md-4 {
+    padding: 4px !important;
+}
+
+button {
+    color: green;
+    border: 0;
+    background-color: inherit;
+    outline: 0;
+    margin-right: 3px;
+}

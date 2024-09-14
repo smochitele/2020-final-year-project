@@ -1,0 +1,419 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Roboto', sans-serif !important;
+    scroll-behavior: smooth;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* The header */
+
+.main-logo {
+    color: rgb(180, 118, 19) !important;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 10px rgba(0, 29, 36, 0.452);
+}
+
+header>nav {
+    padding: 10px !important;
+}
+
+.nav-link {
+    color: rgba(0, 29, 36, 0.863);
+}
+
+
+/* Global style for inputs */
+
+.jumbotron {
+    margin: 5em auto;
+    width: 30em;
+    color: #fff;
+    background-color: rgba(0, 29, 36, 0.952) !important;
+}
+
+.input-home {
+    width: 30em;
+}
+
+.input-form h3,
+.input-form p,
+.input-form small,
+.input-home h3,
+.input-home p,
+.input-home small {
+    margin: 0px 0px 4px 16px;
+}
+
+.input-form small {
+    color: rgba(0, 29, 36, 0.397);
+}
+
+.panic {
+    background: rgb(255, 164, 164);
+    color: #fff;
+}
+
+.group-input,
+.group-links,
+.group-home {
+    display: block;
+    margin: 0 1em;
+}
+
+.group-input label,
+.group-home label {
+    display: block;
+}
+
+.group-input input,
+.group-input select,
+.group-home input,
+.group-input .aspButton {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+.group-home input {
+    border-radius: 0;
+    border-bottom: 1px solid rgb(0, 29, 36);
+}
+
+.group-input .aspButton {
+    margin: 1em 0;
+    color: #fff;
+    outline: none;
+    background-color: rgb(180, 118, 19);
+}
+
+.group-input .aspButton:hover {
+    transition: all ease-in-out 1s;
+    background-color: rgb(150, 95, 8);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.424);
+}
+
+.group-input small {
+    color: red;
+    display: none;
+    margin: 0;
+}
+
+.group-links a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.group-location-input {
+    margin: 0 1em;
+}
+
+.group-location-input input {
+    width: 49%;
+    display: inline;
+    margin: 0 0em;
+    background: rgb(209, 204, 204);
+}
+
+
+/* Public error message */
+
+.error-message {
+    color: red;
+}
+
+.main-content {
+    height: 100vh;
+    /* width: 80%; */
+    padding: 5em 1em;
+    margin: 1em 1em 1em 200px;
+}
+
+
+/* Global style for tables */
+
+.our-table {
+    width: 100%;
+    margin-top: .6em;
+    font-weight: normal;
+}
+
+.our-table thead {
+    background-color: rgb(0, 29, 36);
+    color: #fff;
+}
+
+.our-table th {
+    padding: .5em;
+}
+
+.our-table tbody td {
+    padding: .6em;
+}
+
+.our-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 29, 36, 0.116);
+}
+
+
+/* Global style for buttons */
+
+.our-btn {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 29, 36, 0.863);
+    color: #fff;
+}
+
+.buttons {
+    background: rgb(0, 29, 36);
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.activeButton {
+    background-color: rgb(150, 95, 8) !important;
+}
+
+.buttons>button {
+    padding: 5px;
+    outline: none;
+    background: rgb(0, 29, 36);
+    border: none;
+    color: #fff;
+}
+
+
+/* The side menu */
+
+.menu-section {
+    height: 100vh;
+    color: #fff;
+    position: fixed;
+    width: 200px;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 29, 36, 0.212);
+    background-color: rgb(0, 29, 36);
+}
+
+.menu-section h5 {
+    color: rgba(255, 210, 137, 0.582);
+    text-align: center;
+    padding: .4em 2em;
+}
+
+.menu {
+    list-style: none;
+    padding: 5em 0;
+}
+
+.menu-item,
+.alarm-menu {
+    margin: 0 1em .5em 1em;
+    padding: .3em 2em;
+}
+
+.alarm-menu {
+    margin-left: 1.5em !important;
+    position: absolute;
+    bottom: 80px;
+}
+
+.menu-item {
+    padding: .1em 1.7em;
+    border-radius: 0px;
+}
+
+.active {
+    background-color: rgba(27, 93, 138, 0.171);
+    border-left: 4px solid rgb(180, 118, 19);
+}
+
+.menu-item a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.fas {
+    font-size: 20px;
+    color: #f4f4f47c;
+    margin: 0 0;
+}
+
+
+/* The summary card */
+
+.summary-card img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    display: inline;
+    background-color: rgb(180, 118, 19);
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.summary-card hr {
+    border: 2px solid red;
+    text-align: center;
+    margin: 0 2em;
+}
+
+.summary-card {
+    color: #fff;
+    background-color: rgba(0, 29, 36, 0.952);
+    border-radius: 3px;
+    padding: 1em 0em 1em 1em;
+}
+
+
+/* The add button for occupants */
+
+.btnAdd {
+    padding: .2em .7em;
+    border-radius: 2px;
+    background-color: rgb(180, 118, 19);
+}
+
+.edit,
+.delete {
+    background: inherit;
+    border: none;
+    margin: 0 10px;
+}
+
+
+/*The cases */
+
+.case-card {
+    padding: .4em;
+    margin: .6em;
+    background: rgba(0, 29, 36, 0.068);
+}
+
+.case-card-title {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.case-card-title h5 {
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.dropMenu {
+    background: rgb(180, 118, 19);
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: .1em;
+}
+
+.resolved {
+    border-left: 4px solid lightgreen;
+}
+
+.unresolved {
+    border-left: 4px solid red;
+}
+
+.personal-details img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* The navigation */
+
+.navbar {
+    background: #f4f4f4 !important;
+    padding: .7em;
+}
+
+.login-btn {
+    border-radius: 3px;
+    padding: .05em .7em;
+    background: rgba(0, 29, 36, 0.87);
+}
+
+.login-btn a {
+    color: #f4f4f4 !important;
+}
+
+.home-section {
+    background: linear-gradient(rgba(0, 29, 36, 0.555), rgba(0, 29, 36, 0.555), rgba(0, 29, 36, 0.555)), url(../img/pexels-kaique-rocha-116021.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80%;
+}
+
+.home-section h1 {
+    font-size: 59px;
+    margin: 55px 0;
+}
+
+.about img {
+    width: 100%;
+    height: 100%;
+}
+
+.more-about img {
+    width: 100%;
+    height: 80%;
+}
+
+.about {
+    height: 70%;
+}
+
+.more-about {
+    height: 75%;
+    color: #fff;
+    background: rgb(0, 29, 36);
+}
+
+.searchingClass {
+    border: 1px solid rgb(0, 29, 36);
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    width: 200px;
+    outline: none;
+    font-size: 15px;
+}
+
+.hotspots {
+    border-bottom: 3px solid rgb(180, 118, 19);
+}
+
+.errors {
+    display: none;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+          />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profile"
+            />
+        <item
+            android:id="@+id/cases"
+            android:icon="@drawable/ic_case"
+            android:title="Cases"
+            />
+        <item
+            android:id="@+id/sign_out"
+            android:icon="@drawable/ic_logout"
+            android:title="Sing out"
+            />
+    </group>
+
+</menu>
